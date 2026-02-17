@@ -1,0 +1,72 @@
+/* Custom Animations */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes meshJiggle {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(0.5px, -0.5px);
+  }
+
+  40% {
+    transform: translate(-0.5px, 0.5px);
+  }
+
+  60% {
+    transform: translate(0.5px, 0.3px);
+  }
+
+  80% {
+    transform: translate(-0.3px, -0.5px);
+  }
+}
+
+/* Glowing wire flowing top to bottom */
+@keyframes wireFlowDown {
+  0% {
+    top: -15%;
+  }
+
+  100% {
+    top: 110%;
+  }
+}
+
+.glowing-wire {
+  animation: wireFlowDown 4s linear infinite;
+}
+
+/* Glowing wire flowing left to right */
+@keyframes wireFlowRight {
+  0% {
+    left: -10%;
+  }
+
+  100% {
+    left: 110%;
+  }
+}
+
+.glowing-wire-horizontal {
+  animation: wireFlowRight 5s linear infinite;
+}
