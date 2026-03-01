@@ -55,3 +55,11 @@ export interface CourseSection {
   description: string;
   courses: Course[];
 }
+
+export interface GalleryStudent {
+  id: string;
+  name: string;
+  designation: string;
+  company: string;
+  image: string;
+}

@@ -1,4 +1,4 @@
-import { Feature, Testimonial, Stat, Category, RoadmapStep, CourseSection } from './types';
+import { Feature, Testimonial, Stat, Category, RoadmapStep, CourseSection, GalleryStudent } from './types';
 
 export const NAV_LINKS = [
   { name: 'Home', href: '/' },
@@ -221,3 +221,62 @@ Keep your answers concise, professional, and encouraging.
 If asked about pricing, mention that scholarships are available and to contact admissions.
 Do not make up courses that are not listed.
 Always maintain a tone that fits a high-tech, futuristic institute.`;
+
+export const GALLERY_STUDENTS: GalleryStudent[] = [
+  {
+    id: 'gs1',
+    name: 'Ahmed Raza',
+    designation: 'HVAC Engineer',
+    company: 'Emaar Properties',
+    image: '/students/student1.jpeg',
+  },
+  {
+    id: 'gs2',
+    name: 'Fatima Noor',
+    designation: 'Safety Officer',
+    company: 'Saudi Aramco',
+    image: '/students/student2.jpeg',
+  },
+  {
+    id: 'gs3',
+    name: 'Hassan Ali',
+    designation: 'QA/QC Inspector',
+    company: 'Descon Engineering',
+    image: '/students/student3.jpeg',
+  },
+  {
+    id: 'gs4',
+    name: 'Sana Malik',
+    designation: 'Welding Supervisor',
+    company: 'Bechtel Corporation',
+    image: '/students/student4.jpeg',
+  },
+  {
+    id: 'gs5',
+    name: 'Usman Sheikh',
+    designation: 'Crane Operator',
+    company: 'Al Habtoor Group',
+    image: '/students/student5.jpeg',
+  },
+  {
+    id: 'gs6',
+    name: 'Zainab Tariq',
+    designation: 'Instrument Technician',
+    company: 'Engro Corporation',
+    image: '/students/student6.jpeg',
+  },
+  {
+    id: 'gs7',
+    name: 'Bilal Khan',
+    designation: 'BMS Technician',
+    company: 'Siemens Energy',
+    image: '/students/student7.jpeg',
+  },
+  {
+    id: 'gs8',
+    name: 'Ayesha Iqbal',
+    designation: 'Fire Safety Officer',
+    company: 'ADNOC',
+    image: '/students/student8.jpeg',
+  },
+];

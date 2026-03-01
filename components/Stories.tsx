@@ -1,13 +1,19 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { TESTIMONIALS } from '../constants';
-import { Quote, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { TESTIMONIALS, GALLERY_STUDENTS } from '../constants';
+import { Quote, Send, ChevronDown, ChevronUp, Briefcase } from 'lucide-react';
 import { Button } from './Button';
 
+const INITIAL_VISIBLE = 4;
+
 export const Stories: React.FC = () => {
+    const [showAll, setShowAll] = useState(false);
+    const visibleStudents = showAll ? GALLERY_STUDENTS : GALLERY_STUDENTS.slice(0, INITIAL_VISIBLE);
+
     return (
         <div className="pt-24 min-h-screen bg-oscorp-primary">
             <div className="max-w-7xl mx-auto px-6 py-12">
+                {/* Page Hero */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -18,10 +24,11 @@ export const Stories: React.FC = () => {
                         Student <span className="text-transparent bg-clip-text bg-gradient-to-r from-oscorp-accent to-yellow-600">Stories</span>
                     </h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Discover how Oscrp Technology has transformed careers and shaped the future of our graduates.
+                        Discover how Oscorp Technology has transformed careers and shaped the future of our graduates.
                     </p>
                 </motion.div>
 
+                {/* Testimonials Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
                     {TESTIMONIALS.map((story, index) => (
                         <motion.div
@@ -49,6 +56,74 @@ export const Stories: React.FC = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* ── Graduate Gallery Section ── */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-12"
+                >
+                    <h2 className="text-3xl md:text-4xl font-bold text-oscorp-secondary mb-4">
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-oscorp-accent to-yellow-600">Graduates</span>
+                    </h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                        Meet the talented professionals who launched their careers with Oscorp Technology.
+                    </p>
+                </motion.div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <AnimatePresence mode="popLayout">
+                        {visibleStudents.map((student, index) => (
+                            <motion.div
+                                key={student.id}
+                                layout
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.35, delay: index < INITIAL_VISIBLE ? index * 0.1 : (index - INITIAL_VISIBLE) * 0.08 }}
+                                className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 aspect-[4/5] cursor-pointer"
+                            >
+                                {/* Student Image */}
+                                <img
+                                    src={student.image}
+                                    alt={student.name}
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                />
+
+                                {/* Gradient Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
+
+                                {/* Student Info */}
+                                <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    <h3 className="text-white font-bold text-lg leading-tight">{student.name}</h3>
+                                    <p className="text-oscorp-accent text-sm font-medium mt-1">{student.designation}</p>
+                                    <div className="flex items-center gap-1.5 mt-1.5">
+                                        <Briefcase className="w-3.5 h-3.5 text-gray-300" />
+                                        <p className="text-gray-300 text-xs">{student.company}</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </div>
+
+                {/* Show More / Show Less */}
+                {GALLERY_STUDENTS.length > INITIAL_VISIBLE && (
+                    <div className="text-center mb-20">
+                        <button
+                            onClick={() => setShowAll(!showAll)}
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-oscorp-secondary text-white font-medium hover:bg-oscorp-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg"
+                        >
+                            {showAll ? (
+                                <>Show Less <ChevronUp className="w-4 h-4" /></>
+                            ) : (
+                                <>Show More <ChevronDown className="w-4 h-4" /></>
+                            )}
+                        </button>
+                    </div>
+                )}
 
                 {/* Call to Action for new stories */}
                 <motion.div
