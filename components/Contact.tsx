@@ -19,7 +19,7 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-bold text-oscorp-secondary">Headquarters</h4>
-                <p className="text-gray-500 text-sm">1080 Innovation Blvd, Neo-York, NY 10012</p>
+                <p className="text-gray-500 text-sm">Jamshedpur, Jharkhand, India</p>
               </div>
             </div>
 
@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-bold text-oscorp-secondary">Email Us</h4>
-                <p className="text-gray-500 text-sm">admissions@oscorp.tech</p>
+                <p className="text-gray-500 text-sm">oscorptechnology.1999@gmail.com</p>
               </div>
             </div>
 
@@ -39,7 +39,8 @@ export const Contact: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-bold text-oscorp-secondary">Call Us</h4>
-                <p className="text-gray-500 text-sm">+1 (555) 019-2834</p>
+                <p className="text-gray-500 text-sm">+91 9801488147</p>
+                <p className="text-gray-500 text-sm">+971 545179117</p>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ export const Courses: React.FC = () => {
             <div className="w-px h-40 relative">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent from-0% via-oscorp-accent/30 via-60% to-oscorp-accent to-100%" />
               {/* Bright glowing tip dot */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-oscorp-accent rounded-full shadow-[0_0_6px_rgba(230,179,37,0.9),0_0_15px_rgba(230,179,37,0.6),0_0_30px_rgba(230,179,37,0.3)]" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-oscorp-accent rounded-full shadow-[0_0_6px_rgba(232,134,42,0.9),0_0_15px_rgba(232,134,42,0.6),0_0_30px_rgba(232,134,42,0.3)]" />
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ export const Courses: React.FC = () => {
             <div className="h-px w-48 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent from-0% via-oscorp-accent/30 via-60% to-oscorp-accent to-100%" />
               {/* Bright glowing tip dot */}
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-oscorp-accent rounded-full shadow-[0_0_6px_rgba(230,179,37,0.9),0_0_15px_rgba(230,179,37,0.6),0_0_30px_rgba(230,179,37,0.3)]" />
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-oscorp-accent rounded-full shadow-[0_0_6px_rgba(232,134,42,0.9),0_0_15px_rgba(232,134,42,0.6),0_0_30px_rgba(232,134,42,0.3)]" />
             </div>
           </div>
         </div>

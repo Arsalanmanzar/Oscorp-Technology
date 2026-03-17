@@ -144,13 +144,7 @@ export const DetailedCourseList: React.FC = () => {
                         {course.description}
                       </p>
 
-                      <div className="pt-5 border-t border-white/10 flex items-center justify-between gap-2 mt-auto text-xs font-medium text-gray-400">
-                        <div className="flex items-center gap-1.5 transition-colors group-hover/card:text-white">
-                          <span>View Details</span>
-                          <div className="w-4 h-4 rounded-full bg-white/10 flex items-center justify-center group-hover/card:bg-oscorp-accent group-hover/card:text-white transition-colors">
-                            <Icons.ArrowRight size={10} />
-                          </div>
-                        </div>
+                      <div className="pt-5 border-t border-white/10 flex items-center justify-end gap-2 mt-auto text-xs font-medium text-gray-400">
                         <div className="flex items-center gap-1.5">
                           <Shield size={14} className="text-emerald-400" />
                           <span>Certified</span>

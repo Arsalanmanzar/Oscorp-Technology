@@ -57,8 +57,8 @@ const PageTransition = ({ children }: { children?: React.ReactNode }) => (
 const HomePage = () => (
   <PageTransition>
     <Hero />
-    <CoreCategories />
     <About />
+    <CoreCategories />
     <Courses />
     <Testimonials />
     <TechnicalRoadmap />

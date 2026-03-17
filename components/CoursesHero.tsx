@@ -9,7 +9,7 @@ export const CoursesHero: React.FC = () => {
       <div className="absolute inset-0 z-0">
          <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[80%] bg-oscorp-accent/5 rounded-full blur-3xl"></div>
          <div className="absolute bottom-0 left-0 w-full h-[30%] bg-gradient-to-t from-black to-transparent"></div>
-         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#E6B325 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#E8862A 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
@@ -36,9 +36,11 @@ export const CoursesHero: React.FC = () => {
                     Download Course PDF
                 </Button>
             </a>
-            <Button variant="outline" className="border-white/20 text-white hover:bg-white hover:text-oscorp-secondary w-full sm:w-auto">
-                Speak to Advisor
-            </Button>
+            <a href="/contact">
+                 <Button variant="outline" className="border-white/20 text-white hover:bg-white hover:text-oscorp-secondary w-full sm:w-auto">
+                     Speak to Advisor
+                 </Button>
+            </a>
         </div>
       </div>
     </section>

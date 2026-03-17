@@ -35,7 +35,7 @@ export const TechnicalRoadmap: React.FC = () => {
   const pathDefinition = "M 125 100 C 250 100, 250 300, 375 300 C 500 300, 500 100, 625 100 C 750 100, 750 300, 875 300";
 
   return (
-    <section id="roadmap" className="py-32 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="roadmap" className="py-32 bg-oscorp-navy relative overflow-hidden">
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-[0.03]"
         style={{ backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
@@ -60,9 +60,9 @@ export const TechnicalRoadmap: React.FC = () => {
             <svg className="w-full h-full" viewBox="0 0 1000 400" style={{ overflow: 'visible' }}>
               <defs>
                 <linearGradient id="gradientPath" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#E6B325" stopOpacity="0.1" />
-                  <stop offset="50%" stopColor="#E6B325" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#E6B325" stopOpacity="0.1" />
+                  <stop offset="0%" stopColor="#E8862A" stopOpacity="0.1" />
+                  <stop offset="50%" stopColor="#E8862A" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="#E8862A" stopOpacity="0.1" />
                 </linearGradient>
                 <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
                   <feGaussianBlur stdDeviation="4" result="coloredBlur" />
@@ -95,14 +95,14 @@ export const TechnicalRoadmap: React.FC = () => {
                 <circle
                   cx="0" cy="0"
                   r="12"
-                  fill="#E6B325"
+                  fill="#E8862A"
                   filter="url(#glow)"
                 />
                 <circle
                   cx="0" cy="0"
                   r="20"
                   fill="none"
-                  stroke="#E6B325"
+                  stroke="#E8862A"
                   strokeWidth="1"
                   className="animate-ping opacity-50"
                 />
@@ -135,21 +135,21 @@ export const TechnicalRoadmap: React.FC = () => {
                 >
                   {/* Step Marker */}
                   <div className={`
-                    w-16 h-16 rounded-full flex items-center justify-center shrink-0 z-20 transition-all duration-500 bg-[#151515] border-2 
-                    ${activeStep === index ? 'border-oscorp-accent scale-110 shadow-[0_0_20px_rgba(230,179,37,0.4)]' : 'border-gray-800'}
+                    w-16 h-16 rounded-full flex items-center justify-center shrink-0 z-20 transition-all duration-500 bg-[#132244] border-2 
+                    ${activeStep === index ? 'border-oscorp-accent scale-110 shadow-[0_0_20px_rgba(232,134,42,0.4)]' : 'border-gray-700'}
                   `}>
                     <IconComponent className={`w-6 h-6 transition-colors duration-300 ${activeStep === index ? 'text-oscorp-accent' : 'text-gray-600'}`} />
                   </div>
 
                   {/* Card Content - Solid, no glassmorphism */}
                   <div className={`
-                    flex-1 md:flex-none md:w-full bg-[#151515] border p-6 rounded-xl transition-all duration-300 relative
+                    flex-1 md:flex-none md:w-full bg-[#132244] border p-6 rounded-xl transition-all duration-300 relative
                     ${activeStep === index
-                      ? 'border-oscorp-accent shadow-[0_10px_30px_-10px_rgba(230,179,37,0.3)] translate-y-[-5px]'
-                      : 'border-[#333]'
+                      ? 'border-oscorp-accent shadow-[0_10px_30px_-10px_rgba(232,134,42,0.3)] translate-y-[-5px]'
+                      : 'border-[#1E3A6E]'
                     }
                   `}>
-                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-[#1a1a1a] border border-oscorp-accent rounded-full flex items-center justify-center text-xs font-bold text-oscorp-accent shadow-lg z-20">
+                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-oscorp-navy border border-oscorp-accent rounded-full flex items-center justify-center text-xs font-bold text-oscorp-accent shadow-lg z-20">
                       {index + 1}
                     </div>
 

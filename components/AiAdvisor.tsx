@@ -127,7 +127,7 @@ export const AiAdvisor: React.FC = () => {
               <button 
                 onClick={handleSend}
                 disabled={isLoading || !inputValue.trim()}
-                className="bg-oscorp-accent text-oscorp-secondary p-2 rounded-md hover:bg-[#D4A017] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="bg-oscorp-accent text-white p-2 rounded-md hover:bg-[#D4731F] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 <Send size={18} />
               </button>

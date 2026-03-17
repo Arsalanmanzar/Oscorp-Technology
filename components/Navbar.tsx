@@ -56,18 +56,18 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || location.pathname !== '/' ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-oscorp-navy ${
+        isScrolled ? 'shadow-lg py-3' : 'py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-oscorp-secondary text-white p-2 rounded group-hover:bg-oscorp-accent transition-colors duration-300">
+          <div className="bg-oscorp-accent text-white p-2 rounded group-hover:bg-white group-hover:text-oscorp-navy transition-colors duration-300">
             <Cpu size={24} />
           </div>
-          <span className="text-xl font-bold tracking-tight text-oscorp-secondary">
-            OSCORP<span className="font-light">TECH</span>
+          <span className="text-xl font-bold tracking-tight text-white">
+            OSCORP<span className="font-light text-oscorp-accent">TECH</span>
           </span>
         </Link>
 
@@ -80,7 +80,7 @@ export const Navbar: React.FC = () => {
                 key={link.name} 
                 onClick={() => handleNavClick(link.href)}
                 className={`relative text-sm font-medium transition-colors bg-transparent border-none cursor-pointer px-2 py-1 ${
-                    isActive ? 'text-oscorp-secondary font-bold' : 'text-gray-600 hover:text-oscorp-accent'
+                    isActive ? 'text-oscorp-accent font-bold' : 'text-white/80 hover:text-oscorp-accent'
                 }`}
               >
                 {link.name}
@@ -98,14 +98,14 @@ export const Navbar: React.FC = () => {
           })}
           <Link to="/contact">
             <Button variant="primary" className="px-5 py-2 text-xs uppercase tracking-wider">
-                Enroll Now
+                Contact Us
             </Button>
           </Link>
         </div>
 
         {/* Mobile Toggle */}
         <button 
-          className="md:hidden text-oscorp-secondary"
+          className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -114,7 +114,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-t border-oscorp-neutral p-6 md:hidden shadow-xl flex flex-col gap-4">
+        <div className="absolute top-full left-0 right-0 bg-oscorp-navy border-t border-white/10 p-6 md:hidden shadow-xl flex flex-col gap-4">
           {NAV_LINKS.map((link) => {
             const isActive = isLinkActive(link.href);
             return (
@@ -122,7 +122,7 @@ export const Navbar: React.FC = () => {
                   key={link.name} 
                   onClick={() => handleNavClick(link.href)}
                   className={`text-lg font-medium text-left bg-transparent border-none cursor-pointer ${
-                      isActive ? 'text-oscorp-accent font-bold' : 'text-oscorp-secondary'
+                      isActive ? 'text-oscorp-accent font-bold' : 'text-white/80'
                   }`}
                 >
                   {link.name}
@@ -130,7 +130,7 @@ export const Navbar: React.FC = () => {
             );
           })}
           <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-            <Button className="w-full">Enroll Now</Button>
+            <Button className="w-full">Contact Us</Button>
           </Link>
         </div>
       )}

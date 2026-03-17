@@ -26,7 +26,7 @@ export const AboutHero: React.FC = () => {
 
                         {/* Overlay Name */}
                         <div className="absolute bottom-0 left-0 w-full p-8">
-                            <h3 className="text-3xl font-bold text-white">Norman Osborn</h3>
+                            <h3 className="text-3xl font-bold text-white">Yusuf Khan</h3>
                             <p className="text-oscorp-accent font-medium tracking-wide">Founder & CEO</p>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ export const AboutHero: React.FC = () => {
                     </h1>
 
                     <p className="text-lg text-gray-400 leading-relaxed">
-                        "I founded Oscorp Technology not just to teach, but to bridge the critical gap between academic theory and the ruthless demands of modern industry. We are building the workforce that will maintain the machines of tomorrow."
+                        "Oscorp Technology is not just an institute, it's a home where students reside until they achieve success. We are building the workforce that will maintain the technology of tomorrow."
                     </p>
 
                     <div className="space-y-4 pt-4 border-t border-white/10">

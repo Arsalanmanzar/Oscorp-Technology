@@ -3,7 +3,7 @@ import { Cpu, Twitter, Linkedin, Github } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-oscorp-secondary text-white pt-20 pb-10">
+    <footer className="bg-oscorp-navy text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">

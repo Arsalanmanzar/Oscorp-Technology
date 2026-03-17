@@ -30,16 +30,9 @@ export const Testimonials: React.FC = () => {
                         </div>
                         
                         <div className="mb-6 flex items-center gap-4">
-                            <div className="p-1 bg-white border border-gray-200 rounded-full">
-                                <img 
-                                    src={t.image} 
-                                    alt={t.name} 
-                                    className="w-14 h-14 rounded-full object-cover"
-                                />
-                            </div>
                             <div>
                                 <p className="font-bold text-lg text-oscorp-secondary leading-tight">{t.name}</p>
-                                <p className="text-xs text-gray-500 font-medium uppercase tracking-wide mt-1">{t.role}, {t.company}</p>
+                                <p className="text-xs text-gray-500 font-medium uppercase tracking-wide mt-1">{t.role}</p>
                             </div>
                         </div>
 

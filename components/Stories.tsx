@@ -43,14 +43,9 @@ export const Stories: React.FC = () => {
                             <p className="text-gray-600 mb-6 italic leading-relaxed">"{story.content}"</p>
 
                             <div className="flex items-center gap-4">
-                                <img
-                                    src={story.image}
-                                    alt={story.name}
-                                    className="w-12 h-12 rounded-full object-cover ring-2 ring-oscorp-accent/20"
-                                />
                                 <div>
                                     <h4 className="font-bold text-oscorp-secondary">{story.name}</h4>
-                                    <p className="text-xs text-gray-500">{story.role} at {story.company}</p>
+                                    <p className="text-xs text-gray-500">{story.role}</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -59,6 +54,7 @@ export const Stories: React.FC = () => {
 
                 {/* ── Graduate Gallery Section ── */}
                 <motion.div
+                    id="gallery-section"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -98,11 +94,6 @@ export const Stories: React.FC = () => {
                                 {/* Student Info */}
                                 <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                                     <h3 className="text-white font-bold text-lg leading-tight">{student.name}</h3>
-                                    <p className="text-oscorp-accent text-sm font-medium mt-1">{student.designation}</p>
-                                    <div className="flex items-center gap-1.5 mt-1.5">
-                                        <Briefcase className="w-3.5 h-3.5 text-gray-300" />
-                                        <p className="text-gray-300 text-xs">{student.company}</p>
-                                    </div>
                                 </div>
                             </motion.div>
                         ))}
@@ -113,7 +104,12 @@ export const Stories: React.FC = () => {
                 {GALLERY_STUDENTS.length > INITIAL_VISIBLE && (
                     <div className="text-center mb-20">
                         <button
-                            onClick={() => setShowAll(!showAll)}
+                            onClick={() => {
+                                if (showAll) {
+                                    document.getElementById('gallery-section')?.scrollIntoView({ behavior: 'smooth' });
+                                }
+                                setShowAll(!showAll);
+                            }}
                             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-oscorp-secondary text-white font-medium hover:bg-oscorp-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg"
                         >
                             {showAll ? (
@@ -133,13 +129,15 @@ export const Stories: React.FC = () => {
                     className="bg-oscorp-secondary rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden"
                 >
                     <div className="relative z-10 max-w-2xl mx-auto">
-                        <h2 className="text-3xl font-bold mb-4">Have a Story to Share?</h2>
+                        <h2 className="text-3xl font-bold mb-4">Become a part of our stories</h2>
                         <p className="text-gray-300 mb-8">
                             Your journey inspires the next generation. Submit your success story and be featured in our gallery.
                         </p>
-                        <Button className="bg-white text-oscorp-secondary hover:bg-gray-100">
-                            Submit Your Story <Send className="ml-2 w-4 h-4" />
-                        </Button>
+                        <a href="/contact">
+                            <Button className="bg-white text-blue-900 hover:bg-gray-100 font-bold">
+                                Submit Your Story <Send className="ml-2 w-4 h-4" />
+                            </Button>
+                        </a>
                     </div>
 
                     {/* Decorative background elements */}

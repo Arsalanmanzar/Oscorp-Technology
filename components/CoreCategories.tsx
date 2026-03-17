@@ -50,14 +50,14 @@ export const CoreCategories: React.FC = () => {
                         </mask>
                         <pattern id="meshPattern" width="45" height="45" patternUnits="userSpaceOnUse">
                             {/* Horizontal lines */}
-                            <line x1="0" y1="22.5" x2="45" y2="22.5" stroke="rgba(200,160,30,0.3)" strokeWidth="0.6" />
+                            <line x1="0" y1="22.5" x2="45" y2="22.5" stroke="rgba(232,134,42,0.3)" strokeWidth="0.6" />
                             {/* Vertical lines */}
-                            <line x1="22.5" y1="0" x2="22.5" y2="45" stroke="rgba(200,160,30,0.3)" strokeWidth="0.6" />
+                            <line x1="22.5" y1="0" x2="22.5" y2="45" stroke="rgba(232,134,42,0.3)" strokeWidth="0.6" />
                             {/* Diagonal lines */}
                             <line x1="0" y1="0" x2="45" y2="45" stroke="rgba(0,0,0,0.1)" strokeWidth="0.4" />
                             <line x1="45" y1="0" x2="0" y2="45" stroke="rgba(0,0,0,0.1)" strokeWidth="0.4" />
                             {/* Node dots at intersections */}
-                            <circle cx="22.5" cy="22.5" r="2" fill="rgba(230,179,37,0.45)" />
+                            <circle cx="22.5" cy="22.5" r="2" fill="rgba(232,134,42,0.45)" />
                             <circle cx="0" cy="0" r="1.2" fill="rgba(0,0,0,0.12)" />
                             <circle cx="45" cy="0" r="1.2" fill="rgba(0,0,0,0.12)" />
                             <circle cx="0" cy="45" r="1.2" fill="rgba(0,0,0,0.12)" />
@@ -76,7 +76,7 @@ export const CoreCategories: React.FC = () => {
                             top: mousePos.y - 200,
                             width: 400,
                             height: 400,
-                            background: 'radial-gradient(circle, rgba(230,179,37,0.1) 0%, rgba(230,179,37,0.04) 40%, transparent 70%)',
+                            background: 'radial-gradient(circle, rgba(232,134,42,0.1) 0%, rgba(232,134,42,0.04) 40%, transparent 70%)',
                             transition: 'left 0.1s ease-out, top 0.1s ease-out',
                             pointerEvents: 'none',
                         }}
@@ -109,7 +109,7 @@ export const CoreCategories: React.FC = () => {
                         return (
                             <div
                                 key={cat.id}
-                                className="group relative p-8 border border-oscorp-neutral bg-gray-50 overflow-hidden hover:bg-black hover:border-black hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full md:w-[calc(50%_-_12px)] lg:w-[calc(33.333%_-_16px)]"
+                                className="group relative p-8 border border-oscorp-neutral bg-gray-50 overflow-hidden hover:bg-oscorp-secondary hover:border-oscorp-secondary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 w-full md:w-[calc(50%_-_12px)] lg:w-[calc(33.333%_-_16px)]"
                             >
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-6">
