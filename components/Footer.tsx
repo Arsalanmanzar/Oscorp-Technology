@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Cpu, Twitter, Linkedin, Github } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -7,12 +8,12 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-6">
+            <Link to="/" className="flex items-center gap-2 mb-6">
               <div className="bg-white text-oscorp-secondary p-2 rounded">
                 <Cpu size={20} />
               </div>
               <span className="text-2xl font-bold tracking-tight">OSCORP</span>
-            </a>
+            </Link>
             <p className="text-gray-400 max-w-sm mb-6">
               Empowering the next generation of technologists with cutting-edge curriculum and world-class mentorship.
             </p>
@@ -26,22 +27,22 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Core Courses</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
-              <li><a href="/courses#operating" className="hover:text-oscorp-accent cursor-pointer transition-colors">Operating Courses</a></li>
-              <li><a href="/courses#safety" className="hover:text-oscorp-accent cursor-pointer transition-colors">Safety Officer Courses</a></li>
-              <li><a href="/courses#job" className="hover:text-oscorp-accent cursor-pointer transition-colors">Job Oriented Courses</a></li>
-              <li><a href="/courses#qc" className="hover:text-oscorp-accent cursor-pointer transition-colors">Quality Controller</a></li>
-              <li><a href="/courses#welding" className="hover:text-oscorp-accent cursor-pointer transition-colors">Welding</a></li>
+              <li><Link to="/courses#operating" className="hover:text-oscorp-accent cursor-pointer transition-colors">Operating Courses</Link></li>
+              <li><Link to="/courses#safety" className="hover:text-oscorp-accent cursor-pointer transition-colors">Safety Officer Courses</Link></li>
+              <li><Link to="/courses#job" className="hover:text-oscorp-accent cursor-pointer transition-colors">Job Oriented Courses</Link></li>
+              <li><Link to="/courses#qc" className="hover:text-oscorp-accent cursor-pointer transition-colors">Quality Controller</Link></li>
+              <li><Link to="/courses#welding" className="hover:text-oscorp-accent cursor-pointer transition-colors">Welding</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-lg mb-6">Company</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
-              <li><a href="/" className="hover:text-oscorp-accent cursor-pointer transition-colors">Home</a></li>
-              <li><a href="/about" className="hover:text-oscorp-accent cursor-pointer transition-colors">About</a></li>
-              <li><a href="/courses" className="hover:text-oscorp-accent cursor-pointer transition-colors">Courses</a></li>
-              <li><a href="/stories" className="hover:text-oscorp-accent cursor-pointer transition-colors">Stories</a></li>
-              <li><a href="/contact" className="hover:text-oscorp-accent cursor-pointer transition-colors">Contact</a></li>
+              <li><Link to="/" className="hover:text-oscorp-accent cursor-pointer transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-oscorp-accent cursor-pointer transition-colors">About</Link></li>
+              <li><Link to="/courses" className="hover:text-oscorp-accent cursor-pointer transition-colors">Courses</Link></li>
+              <li><Link to="/stories" className="hover:text-oscorp-accent cursor-pointer transition-colors">Stories</Link></li>
+              <li><Link to="/contact" className="hover:text-oscorp-accent cursor-pointer transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>

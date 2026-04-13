@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TESTIMONIALS, GALLERY_STUDENTS } from '../constants';
 import { Quote, Send, ChevronDown, ChevronUp, Briefcase } from 'lucide-react';
@@ -133,11 +134,11 @@ export const Stories: React.FC = () => {
                         <p className="text-gray-300 mb-8">
                             Your journey inspires the next generation. Submit your success story and be featured in our gallery.
                         </p>
-                        <a href="/contact">
+                        <Link to="/contact">
                             <Button className="bg-white text-blue-900 hover:bg-gray-100 font-bold">
                                 Submit Your Story <Send className="ml-2 w-4 h-4" />
                             </Button>
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Decorative background elements */}

@@ -88,7 +88,7 @@ export const Hero: React.FC = () => {
       {/* Hero Section with Full-Width Background Image */}
       <motion.section
         id="home"
-        className="relative min-h-[85vh] flex items-center overflow-hidden"
+        className="relative min-h-[60vh] md:min-h-[85vh] flex items-center overflow-hidden"
       >
         {/* Background Image */}
         <div
@@ -116,7 +116,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Main content */}
-        <div className="max-w-7xl mx-auto px-6 py-32 md:py-40 w-full relative z-10">
+        <div className="max-w-7xl mx-auto px-6 pt-32 pb-20 md:py-40 w-full relative z-10">
           <div className="max-w-3xl">
             {/* Badge */}
             <motion.div
@@ -208,7 +208,7 @@ export const Hero: React.FC = () => {
       </motion.section>
 
       {/* Stats Section - White Background */}
-      <section className="py-16 bg-white relative z-10">
+      <section className="py-10 md:py-16 bg-white relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             {STATS.map((stat, index) => (

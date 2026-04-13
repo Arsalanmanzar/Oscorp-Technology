@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { INSTITUTE_FEATURES } from '../constants';
 import * as Icons from 'lucide-react';
 import { Button } from './Button';
@@ -94,9 +95,9 @@ export const Courses: React.FC = () => {
               We bridge the gap between academic theory and industrial reality with an ecosystem designed for mastery.
             </p>
           </div>
-          <a href="#about">
+          <Link to="/about">
             <Button variant="primary">Know More</Button>
-          </a>
+          </Link>
         </div>
 
         <div className="flex flex-wrap justify-center gap-8">

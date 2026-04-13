@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import { BookOpen, Download } from 'lucide-react';
 
@@ -36,11 +37,11 @@ export const CoursesHero: React.FC = () => {
                     Download Course PDF
                 </Button>
             </a>
-            <a href="/contact">
+            <Link to="/contact">
                  <Button variant="outline" className="border-white/20 text-white hover:bg-white hover:text-oscorp-secondary w-full sm:w-auto">
                      Speak to Advisor
                  </Button>
-            </a>
+            </Link>
         </div>
       </div>
     </section>
